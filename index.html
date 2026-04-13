@@ -91,7 +91,7 @@
         /* LIGHTBOX */
         .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; }
         .lightbox-img { max-width: 85%; max-height: 85vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; }
-        .chiudi-lightbox { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .chiudi-lightbox { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.2s; z-index: 2001; }
         .chiudi-lightbox:hover { color: var(--verde-chiaro); }
         
         .freccia { cursor: pointer; position: absolute; top: 50%; padding: 16px; color: white; font-weight: bold; font-size: 40px; background-color: rgba(0,0,0,0.3); border-radius: 5px; z-index: 2001; }
@@ -124,6 +124,7 @@
         <nav class="nav-links" id="menuNavigazione">
             <a href="#struttura" onclick="toggleMenu()"><span lang="it">La Struttura</span><span lang="en">The Property</span></a>
             <a href="#galleria" onclick="toggleMenu()"><span lang="it">Galleria</span><span lang="en">Gallery</span></a>
+            <a href="#recensioni" onclick="toggleMenu()"><span lang="it">Recensioni</span><span lang="en">Reviews</span></a>
             <a href="#dovesiamo" onclick="toggleMenu()"><span lang="it">Dove Siamo</span><span lang="en">Location</span></a>
             <a href="https://padresergiohouseapulia.github.io/padresergio_richiesta/" target="_blank" class="btn-nav">
                 <span lang="it">Richiedi disponibilità</span><span lang="en">Check Availability</span>
@@ -233,11 +234,6 @@
         <h2 class="sezione-titolo">
             <span lang="it">Galleria</span><span lang="en">Gallery</span>
         </h2>
-        <p class="sezione-desc">
-            <span lang="it">Scopri in anteprima gli spazi che ti accoglieranno.</span>
-            <span lang="en">Take a preview of the spaces that will welcome you.</span>
-        </p>
-        
         <div class="griglia-foto">
             <img src="foto_giardino.jpg" alt="Giardino" class="foto">
             <img src="torchio.jpg" alt="Giardino" class="foto">
@@ -257,15 +253,23 @@
         </div>
     </section>
 
-    <section id="dovesiamo" class="sezione">
+    <section id="recensioni" class="sezione">
+        <h2 class="sezione-titolo">
+            <span lang="it">Dicono di noi</span><span lang="en">Guest Reviews</span>
+        </h2>
+        <p class="sezione-desc">
+            <span lang="it">Scopri cosa dicono i nostri ospiti.</span>
+            <span lang="en">Discover what our guests say about us.</span>
+        </p>
+        
+        <script defer async src='https://cdn.trustindex.io/loader.js?9758f1c699564627bf9643c4517'></script>
+
+    </section>
+
+    <section id="dovesiamo" class="sezione" style="background-color: white;">
         <h2 class="sezione-titolo">
             <span lang="it">Dove Siamo</span><span lang="en">Location</span>
         </h2>
-        <p class="sezione-desc">
-            <span lang="it">Ci troviamo in una posizione strategica per esplorare le meraviglie del territorio.</span>
-            <span lang="en">We are located in a strategic position to explore the wonders of the territory.</span>
-        </p>
-        
         <div class="mappa-container">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d744.6458046547098!2d17.2205409!3d40.9191685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347b56b7fa24647%3A0x4149e0b036b7bcc8!2sPadresergio%20house%20Apulia!5e1!3m2!1sit!2sit!4v1775743901566!5m2!1sit!2sit" 
@@ -285,10 +289,10 @@
         <p>Email: padresergiohouse@gmail.com | Tel: +39 3384699286</p>
         
         <div class="social-links">
-            <a href="https://www.facebook.com/share/1H1Mx734bc/" target="_blank" aria-label="Facebook">
+            <a href="#" target="_blank" aria-label="Facebook">
                 <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.325V1.325C24 .597 23.403 0 22.675 0z"/></svg>
             </a>
-            <a href="https://www.instagram.com/padresergio_house_apulia_?igsh=MXYwNXhyNGt3OTRvdw==" target="_blank" aria-label="Instagram">
+            <a href="#" target="_blank" aria-label="Instagram">
                 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
         </div>
@@ -309,7 +313,6 @@
     </div>
 
     <script>
-        // FUNZIONE CAMBIO LINGUA
         function changeLang(lang) {
             if (lang === 'en') {
                 document.body.classList.add('lang-en');
@@ -334,7 +337,6 @@
             }
         }
 
-        // GALLERIA
         let indiceFotoAttuale = 0;
         const fotoGalleria = Array.from(document.querySelectorAll('.foto'));
         const lightbox = document.getElementById('lightbox');
